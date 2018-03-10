@@ -8,6 +8,13 @@ angular.module('ucode18', ['ui.router'])
                 url: "/starter",
                 templateUrl: "templates/starter.html",
                 controller: "starterCtrl"
+            })
+
+            //starter screen
+            .state('style', {
+                url: "/style",
+                templateUrl: "templates/style.html",
+                controller: "styleCtrl"
             });
 
         $urlRouterProvider.otherwise('starter');

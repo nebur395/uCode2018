@@ -11,12 +11,19 @@
 
 #starterStyle #processButton {
   font-weight: 700;
-  opacity: 0.7;
+  opacity: 0.5;
   color: #ffffff;
   background-color: #000000;
-  font-size: 120%;
+  font-size: 100%;
   padding: 10px 40px;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  border: 2px solid rgb(255, 255, 255);
   margin: auto;
   border-radius: 0;
+}
+
+#starterStyle #processButton:hover {
+  opacity: 0.7;
+  transition: 0.1s;
+  padding: 10px 40px;
+  font-size: 110%;
 }

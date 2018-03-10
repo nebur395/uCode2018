@@ -3,8 +3,8 @@
   animation-name: iconucode;
   -webkit-animation-name: iconucode;
   /* The duration of the animation */
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
   /* Make the element visible */
   visibility: visible;
 }
@@ -13,7 +13,7 @@
 @keyframes iconucode {
   0% {
     opacity: 0;
-    transform: translateY(70%);
+    transform: translateY(20%);
   }
   100% {
     opacity: 1;
