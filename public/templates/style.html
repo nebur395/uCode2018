@@ -12,14 +12,14 @@
       <div class="accordionCard">
         <button class="accordion" ng-click="showClothCard = !showClothCard"
                 ng-class="{active: showClothCard}">
-          PRENDA
+          PRENDA: <span style="margin-left: 5%">$ {{totalClothes}}</span>
         </button>
         <div class="panel" ng-class="{show: showClothCard}">
           <div class="col-xs-4 clothStyle" ng-repeat="cloth in clothesList"
                ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
             <img class="img-responsive"
                  ng-src="{{cloth.src}}">
-            <p class="text-center" style="padding-top: 5px">{{cloth.price}} $</p>
+            <p class="text-center" style="padding-top: 10px;margin-bottom: 0">$ {{cloth.price}}</p>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
                ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
             <img class="img-responsive"
                  ng-src="{{cloth.src}}">
-            <p class="text-center" style="padding-top: 5px">{{cloth.price}} $</p>
+            <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
                ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
             <img class="img-responsive"
                  ng-src="{{cloth.src}}">
-            <p class="text-center" style="padding-top: 5px">{{cloth.price}} $</p>
+            <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
           </div>
         </div>
       </div>
@@ -59,10 +59,8 @@
     </div>
 
     <div class="col-xs-6" id="styleView">
-      <div style="max-width: 750px;margin:auto">
         <img class="img-responsive"
              src="../images/style/view/original.jpg">
-      </div>
     </div>
 
   </div>

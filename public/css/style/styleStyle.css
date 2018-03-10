@@ -1,3 +1,16 @@
+#styleStyle #styleHandler {
+  height: 100%;
+  padding: 5%;
+  background-color: orange;
+}
+
+#styleStyle #styleView {
+  height: 100%;
+  padding: 5%;
+  background-color: red;
+  overflow: hidden;
+}
+
 #styleStyle .clothStyle {
   /* shadow effect to the wardrobe box */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -18,5 +31,6 @@
 
 #styleStyle .clothStyle.selectedCloth {
   /* shadow effect to the wardrobe box */
-  box-shadow: 0 2px 4px 0 rgba(235, 140, 0, 0.2), 0 3px 10px 0 rgba(235, 140, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(255, 8, 27, 0.2), 0 3px 10px 0 rgba(255, 8, 27, 0.19);
+  border: 1px solid rgb(255, 8, 27);
 }
