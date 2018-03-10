@@ -1,8 +1,10 @@
 /* Style the buttons that are used to open and close the accordion panel */
 .accordionCard button.accordion {
-  background-color: #d7d7d7;
+  background-color: #000000;
+  opacity: 0.5;
+  color: #ffffff;
   cursor: pointer;
-  padding: 18px;
+  padding: 10px 18px;
   width: 100%;
   text-align: left;
   border: none;
@@ -14,13 +16,14 @@
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordionCard button.accordion.active, button.accordion:hover {
-  background-color: #afafaf;
+  background-color: #000000;
+  opacity: 0.8;
 }
 
 .accordionCard button.accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
-  color: #777;
+  color: #ffffff;
   float: right;
   margin-left: 5px;
 }
@@ -32,7 +35,7 @@
 /* Style the accordion panel. Note: hidden by default */
 .accordionCard div.panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: rgba(0,0,0,0.5);
   max-height: 0;
   overflow: hidden;
   transition: 0.6s ease-in-out;
@@ -45,6 +48,11 @@
 .accordionCard div.panel.show {
   opacity: 1;
   max-height: 500px;
-  border-left: 1px solid #d7d7d7;
-  border-right: 1px solid #d7d7d7;
+  border-left: 1px solid rgba(0,0,0,0.8);
+  border-right: 1px solid rgba(0,0,0,0.8);
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+
+.accordionCard {
+  margin-bottom: 3%;
 }
