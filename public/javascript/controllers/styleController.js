@@ -6,14 +6,13 @@ angular.module('ucode18')
         $scope.state = 000;
 
         $scope.clothesList = [
-            {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20.5, selected: false},
-            {id:1,src:"../images/style/clothes/camisetabase.jpg", price: 36.5, selected: false}];
-        $scope.stylesList = [
-            {id:0,src:"../images/style/clothes/camisetabasenegro.jpg", price: 1, selected: false},
-            {id:1,src:"../images/style/clothes/camisetalrayas.jpg", price: 1, selected: false}];
+            {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20.5, selected: false, model: "XX1"},
+            {id:0,src:"../images/style/clothes/camisetabasenegro.jpg", price: 1, selected: false, model: "XX3"}];
+        $scope.stylesList = [,
+            {id:1,src:"../images/style/clothes/camisetalrayas.jpg", price: 1, selected: false, model: "XX4"}];
         $scope.logosList = [
-            {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 5, selected: false},
-            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 1, selected: false}];
+            {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 5, selected: false, model: "XX4"},
+            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 1, selected: false, model: "XX5"}];
         $scope.totalClothes = 0;
         $scope.totalStyles = 0;
         $scope.totalLogos = 0;
