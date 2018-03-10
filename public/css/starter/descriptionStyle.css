@@ -1,0 +1,21 @@
+#descriptionStyle a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#descriptionStyle img {
+  max-height: 296px !important;
+}
+
+@media only screen and (max-width: 767px){
+  #descriptionStyle #analyticSection{
+    padding: 5%;
+    margin-bottom: 15%;
+  }
+}

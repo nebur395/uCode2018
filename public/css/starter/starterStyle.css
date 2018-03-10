@@ -1,0 +1,58 @@
+.loader {
+  border: 14px solid #f3f3f3; /* Light grey */
+  border-top: 14px solid #9aae04; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+#starterStyle #processButton {
+  font-weight: 700;
+  padding: 5% 10%;
+  font-size: 150%;
+  margin: auto;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  background-color: #f1f1f1;
+  border: 1px solid #cdcdcd;
+  border-bottom-color: transparent;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: #e1e1e1;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.nav-tabs>li>a {
+  color: #9aae04;
+  border: 1px solid transparent;
+}
+
+.nav-tabs>li {
+  width: 20%;
+}
+
+#activeToggleable {
+  margin-left: 10%
+}
+
+@media only screen and (max-width: 767px){
+  #activeToggleable {
+    margin-left: 0;
+  }
+  .nav-tabs>li {
+    width: 25%;
+  }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
