@@ -1,66 +1,71 @@
 <div id="styleStyle">
+
+  <!-- logo -->
+  <div id="bannerLogo">
+    <img class="imgRespUcode" src="../images/style/navbar.png">
+  </div>
+
   <div class="container">
 
-    <!-- logo -->
-    <div class="row" style="padding-bottom: 2%">
-      <img class="img-responsive" src="../images/style/navbar.png">
-    </div>
 
-    <div class="col-xs-6" id="styleHandler">
+    <div class="row">
+      <div class="col-xs-6" id="styleHandler">
+        <div id="accordionsSection">
 
-      <!-- CLOTH ACCORDION -->
-      <div class="accordionCard">
-        <button class="accordion" ng-click="showClothCard = !showClothCard"
-                ng-class="{active: showClothCard}">
-          PRENDA: <span style="margin-left: 5%">$ {{totalClothes}}</span>
-        </button>
-        <div class="panel" ng-class="{show: showClothCard}">
-          <div class="col-xs-4 clothStyle" ng-repeat="cloth in clothesList"
-               ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
-            <img class="img-responsive"
-                 ng-src="{{cloth.src}}">
-            <p class="text-center" style="padding-top: 10px;margin-bottom: 0">$ {{cloth.price}}</p>
+          <!-- CLOTH ACCORDION -->
+          <div class="accordionCard">
+            <button class="accordion" ng-click="showClothCard = !showClothCard"
+                    ng-class="{active: showClothCard}">
+              PRENDA: <span style="margin-left: 5%">$ {{totalClothes}}</span>
+            </button>
+            <div class="panel" ng-class="{show: showClothCard}">
+              <div class="col-xs-4 clothStyle" ng-repeat="cloth in clothesList"
+                   ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
+                <img class="img-responsive"
+                     ng-src="{{cloth.src}}">
+                <p class="text-center" style="padding-top: 10px;margin-bottom: 0">$ {{cloth.price}}</p>
+              </div>
+            </div>
           </div>
+
+          <!-- STYLE ACCORDION -->
+          <div class="accordionCard">
+            <button class="accordion" ng-click="showStyleCard = !showStyleCard"
+                    ng-class="{active: showStyleCard}">
+              ESTILO
+            </button>
+            <div class="panel" ng-class="{show: showStyleCard}">
+              <div class="col-xs-4 clothStyle" ng-repeat="cloth in stylesList"
+                   ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
+                <img class="img-responsive"
+                     ng-src="{{cloth.src}}">
+                <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LOGO ACCORDION -->
+          <div class="accordionCard">
+            <button class="accordion" ng-click="showLogoCard = !showLogoCard" ng-class="{active: showLogoCard}">
+              LOGO
+            </button>
+            <div class="panel" ng-class="{show: showLogoCard}">
+              <div class="col-xs-4 clothStyle" ng-repeat="cloth in logosList"
+                   ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
+                <img class="img-responsive"
+                     ng-src="{{cloth.src}}">
+                <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- STYLE ACCORDION -->
-      <div class="accordionCard">
-        <button class="accordion" ng-click="showStyleCard = !showStyleCard"
-                ng-class="{active: showStyleCard}">
-          ESTILO
-        </button>
-        <div class="panel" ng-class="{show: showStyleCard}">
-          <div class="col-xs-4 clothStyle" ng-repeat="cloth in stylesList"
-               ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
-            <img class="img-responsive"
-                 ng-src="{{cloth.src}}">
-            <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- LOGO ACCORDION -->
-      <div class="accordionCard">
-        <button class="accordion" ng-click="showLogoCard = !showLogoCard" ng-class="{active: showLogoCard}">
-          LOGO
-        </button>
-        <div class="panel" ng-class="{show: showLogoCard}">
-          <div class="col-xs-4 clothStyle" ng-repeat="cloth in logosList"
-               ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
-            <img class="img-responsive"
-                 ng-src="{{cloth.src}}">
-            <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="col-xs-6" id="styleView">
-        <img class="img-responsive"
+      <div class="col-xs-6" id="styleView">
+        <img class="imgRespUcode"
              src="../images/style/view/original.jpg">
+      </div>
     </div>
 
   </div>

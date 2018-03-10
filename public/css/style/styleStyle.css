@@ -1,16 +1,36 @@
+#styleStyle {
+  height: 100%;
+}
+#styleStyle .container {
+  height: calc(100vh - 120px);
+}
+#styleStyle .container .row {
+  height: 100%;
+}
 #styleStyle #styleHandler {
   height: 100%;
-  padding: 5%;
-  background-color: orange;
 }
 
 #styleStyle #styleView {
   height: 100%;
-  padding: 5%;
-  background-color: red;
-  overflow: hidden;
+  padding: 2%;
 }
-
+#styleStyle #bannerLogo {
+  margin-bottom: 20px;
+  height: 100px;
+}
+#styleStyle #bannerLogo img {
+  display:block;
+  width: auto;
+  max-height: 100%;
+  margin: auto;
+}
+#styleStyle .imgRespUcode {
+  display:block;
+  width: auto;
+  max-height: 90%;
+  margin: auto;
+}
 #styleStyle .clothStyle {
   /* shadow effect to the wardrobe box */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -33,4 +53,12 @@
   /* shadow effect to the wardrobe box */
   box-shadow: 0 2px 4px 0 rgba(255, 8, 27, 0.2), 0 3px 10px 0 rgba(255, 8, 27, 0.19);
   border: 1px solid rgb(255, 8, 27);
+}
+
+#styleStyle #accordionsSection {
+  margin-top: 5%;
+  border: 1px solid rgb(255, 8, 27);
+  padding: 2%;
+  overflow-y: auto;
+  height: 80%;
 }
