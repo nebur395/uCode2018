@@ -1,0 +1,35 @@
+<div id="styleStyle">
+  <div class="container">
+
+    <!-- logo -->
+    <div class="row" style="padding-bottom: 2%">
+      <img class="img-responsive" src="../images/style/navbar.png">
+    </div>
+
+    <div class="col-xs-6" id="styleHandler">
+
+      <!-- CLOTH ACCORDION -->
+      <div class="accordionCard">
+        <button class="accordion" ng-click="showCard = !showCard" ng-class="{active: showCard}">
+          PRENDA
+        </button>
+        <div class="panel" ng-class="{show: showCard}">
+          <div class="col-xs-4 clothStyle" ng-repeat="i in clothesList">
+            <img class="img-responsive"
+                 src="../images/style/clothes/camisetabase.jpg">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-xs-6" id="styleView">
+      <div style="max-width: 750px;margin:auto">
+        <img class="img-responsive"
+             src="../images/style/view/original.jpg">
+      </div>
+    </div>
+
+  </div>
+</div>

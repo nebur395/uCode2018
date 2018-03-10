@@ -5,6 +5,7 @@ html, body {
   background-size: cover;
   background-color: #f1f1f1;
   font-family: "Roboto", sans-serif;
+  background-image: url("/images/plantilla_fondo-08.png");
   height: 100% !important;
 }
 

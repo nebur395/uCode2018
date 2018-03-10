@@ -6,8 +6,7 @@ angular.module('ucode18', ['ui.router'])
         //starter screen
             .state('starter', {
                 url: "/starter",
-                templateUrl: "templates/starter.html",
-                controller: "starterCtrl"
+                templateUrl: "templates/starter.html"
             })
 
             //starter screen
