@@ -1,4 +1,4 @@
-angular.module('machinLenin')
+angular.module('ucode18')
 
 // include the 'navbar.html' into the <navbar> tag
     .directive('description', function () {

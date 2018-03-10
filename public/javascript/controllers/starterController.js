@@ -1,4 +1,4 @@
-angular.module('machinLenin')
+angular.module('ucode18')
 
     .controller('starterCtrl', ['$scope', '$state', 'videoFilter', function ($scope, $state, videoFilter) {
 

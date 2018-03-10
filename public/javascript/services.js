@@ -1,4 +1,4 @@
-angular.module('machinLenin')
+angular.module('ucode18')
 
 // 'videoFilter' service manage the exercise video filter functions of the page with the server
     .factory('videoFilter', function ($state, $http) {

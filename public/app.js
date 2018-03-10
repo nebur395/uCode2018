@@ -1,4 +1,4 @@
-angular.module('machinLenin', ['ui.router'])
+angular.module('ucode18', ['ui.router'])
 
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
