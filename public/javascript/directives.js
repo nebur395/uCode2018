@@ -10,15 +10,6 @@ angular.module('ucode18')
         }
     })
 
-    //include the 'wardrobe.html' into the <wardrobe> tag
-    .directive('filters', function () {
-        return {
-            restrict: 'E',
-            templateUrl: 'templates/components/filters.html',
-            scope: {}
-        }
-    })
-
     //include the 'cloth.html' into the <cloth> tag
     .directive('search', function () {
         return {

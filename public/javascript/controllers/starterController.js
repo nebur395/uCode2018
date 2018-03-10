@@ -1,6 +1,6 @@
 angular.module('ucode18')
 
-    .controller('starterCtrl', ['$scope', '$state', 'videoFilter', function ($scope, $state, videoFilter) {
+    .controller('starterCtrl', ['$scope', '$state', function ($scope, $state) {
 
         $scope.firstView = true;
         $scope.secondView = false;
@@ -25,7 +25,6 @@ angular.module('ucode18')
         };
 
         $scope.startProcess = function () {
-            videoFilter.startProcess($scope.processed);
             $scope.processing();
         };
 
