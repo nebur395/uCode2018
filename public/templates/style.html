@@ -13,8 +13,7 @@
            ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
            accept="image/*,application/pdf"
            ngf-pattern="'image/*,application/pdf'">
-        <img ng-mouseenter="changeDropBackgroundEnter()" ng-mouseleave="changeDropBackgroundExit()"
-             ng-src="{{dropBackgroundImage}}">
+        <img src="../images/style/drop.png">
       </div>
       <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
     </div>
@@ -31,7 +30,7 @@
               CLOTHES: <span style="margin-left: 5%">$ {{totalClothes}}</span>
             </button>
             <div class="panel" ng-class="{show: showClothCard}">
-              <div class="col-xs-5 clothStyle" ng-repeat="cloth in clothesList"
+              <div class="col-xs-5 col-md-3 clothStyle" ng-repeat="cloth in clothesList"
                    ng-click="activeCloth(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
                 <img class="img-responsive"
                      ng-src="{{cloth.src}}">
@@ -47,7 +46,7 @@
               STYLES: <span style="margin-left: 5%">$ {{totalStyles}}</span>
             </button>
             <div class="panel" ng-class="{show: showStyleCard}">
-              <div class="col-xs-5 clothStyle" ng-repeat="cloth in stylesList"
+              <div class="col-xs-5 col-md-3  clothStyle" ng-repeat="cloth in stylesList"
                    ng-click="activeStyle(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
                 <img class="img-responsive"
                      ng-src="{{cloth.src}}">
@@ -62,7 +61,7 @@
               LOGOS: <span style="margin-left: 5%">$ {{totalLogos}}</span>
             </button>
             <div class="panel" ng-class="{show: showLogoCard}">
-              <div class="col-xs-5 clothStyle" ng-repeat="cloth in logosList"
+              <div class="col-xs-5 col-md-3  clothStyle" ng-repeat="cloth in logosList"
                    ng-click="activeLogo(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
                 <img class="img-responsive"
                      ng-src="{{cloth.src}}">

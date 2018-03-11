@@ -47,25 +47,18 @@ angular.module('ucode18')
         $scope.styleImageView = "../images/style/view/original.jpg";
         $scope.dropBackgroundImage = "../images/style/drop.png";
 
-        $scope.changeDropBackgroundEnter = function () {
-            $scope.dropBackgroundImage = "../images/style/drop_hover.png";
-        };
-        $scope.changeDropBackgroundExit = function () {
-            $scope.dropBackgroundImage = "../images/style/drop.png";
-        };
-
         $scope.showClothCard = false;
         $scope.showStyleCard = false;
         $scope.showLogoCard = false;
 
         $scope.clothesList = [
-            {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20.5, selected: false, model: "XX1"},
-            {id:1,src:"../images/style/clothes/camisetabasenegro.jpg", price: 1, selected: false, model: "XX3"}];
+            {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20, selected: false, model: "XX1"},
+            {id:1,src:"../images/style/clothes/camisetabasenegro.jpg", price: 25, selected: false, model: "XX3"}];
         $scope.stylesList = [
-            {id:0,src:"../images/style/clothes/camisetalrayas.jpg", price: 1, selected: false, model: "XX4"}];
+            {id:0,src:"../images/style/clothes/camisetalrayas.jpg", price: 5, selected: false, model: "XX4"}];
         $scope.logosList = [
-            {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 5, selected: false, model: "XX4"},
-            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 1, selected: false, model: "XX5"}];
+            {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 10, selected: false, model: "XX4"},
+            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: false, model: "XX5"}];
         $scope.totalClothes = 0;
         $scope.totalStyles = 0;
         $scope.totalLogos = 0;
