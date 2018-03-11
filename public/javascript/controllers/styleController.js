@@ -29,7 +29,6 @@ angular.module('ucode18')
                         }, null, function (evt) {
                             $scope.progressPercentage = parseInt(100.0 *
                                 evt.loaded / evt.total);
-                            console.log($scope.progressPercentage);
                         });
                     }
                 }
@@ -44,7 +43,8 @@ angular.module('ucode18')
             }
         });
 
-        $scope.styleImageView = "../images/style/view/original.jpg";
+        $scope.stylePersonImageView = "../images/style/view/original.jpg";
+        $scope.styleClothImageView = "../images/style/view/original.jpg";
         $scope.dropBackgroundImage = "../images/style/drop.png";
 
         $scope.showClothCard = false;
@@ -75,6 +75,15 @@ angular.module('ucode18')
         $scope.totalStyles = 0;
         $scope.totalLogos = $scope.logosList[1].price;
 
+        $scope.contador = 1;
+        $scope.changeImage = function() {
+            if ($scope.contador <= 7) {
+                $scope.stylePersonImageView = "../images/style/view/person/" + $scope.contador + ".jpg";
+                $scope.styleClothImageView = "../images/style/view/clothes/" + $scope.contador + ".jpg";
+                $scope.contador++;
+            }
+        };
+
         $scope.activeCloth = function(id) {
             for (i = 0; i < $scope.clothesList.length; i++) {
                 if (id === $scope.clothesList[i].id && $scope.clothesList[i].selected) {
@@ -89,6 +98,7 @@ angular.module('ucode18')
                     $scope.clothesList[i].selected = false;
                 }
             }
+            $scope.changeImage();
         };
 
         $scope.activeStyle = function(id) {
@@ -112,6 +122,7 @@ angular.module('ucode18')
                     }
                 }
             }
+            $scope.changeImage();
         };
 
         $scope.activeStripes = function(stripe) {
@@ -139,6 +150,7 @@ angular.module('ucode18')
                     $scope.logosList[i].selected = false;
                 }
             }
+            $scope.changeImage();
         };
 
         $scope.openCard = function(card) {
@@ -161,12 +173,27 @@ angular.module('ucode18')
             }
         };
 
-        $scope.changeImageView = function() {
-
-        };
-
         $scope.goStarter = function () {
             $state.go('starter');
-        }
+        };
+
+        $scope.slideIndex = 1;
+
+        $scope.showDivs =function (n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {$scope.slideIndex = 1}
+            if (n < 1) {$scope.slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[$scope.slideIndex-1].style.display = "block";
+        };
+
+        $scope.showDivs($scope.slideIndex);
+
+        $scope.plusDivs = function (n) {
+            $scope.showDivs($scope.slideIndex += n);
+        };
 
     }]);

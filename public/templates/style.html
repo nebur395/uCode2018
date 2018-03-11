@@ -82,8 +82,13 @@
 
       <div class="col-xs-6" id="styleView"
            ng-class="{imageViewAnimation: showOptions, hiddenOptions: !showOptions}">
-        <img class="imgRespUcode" style="border: 2px solid rgb(255,255,255);"
-             ng-src="{{styleImageView}}">
+        <img class="imgRespUcode mySlides" style="border: 2px solid rgb(255,255,255);"
+             ng-src="{{stylePersonImageView}}">
+        <img class="imgRespUcode mySlides" style="border: 2px solid rgb(255,255,255);"
+             ng-src="{{styleClothImageView}}">
+
+        <button class="w3-button w3-black w3-display-left" ng-click="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" ng-click="plusDivs(1)">&#10095;</button>
       </div>
     </div>
 
