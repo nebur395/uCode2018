@@ -7,8 +7,18 @@
 
   <div class="container">
 
+    <div class="row" ng-hide="showOptions">
+      <div ngf-drop ngf-select ng-model="files" class="drop-box"
+           ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+           accept="image/*,application/pdf"
+           ngf-pattern="'image/*,application/pdf'">
+        <img class="img-responsive"
+             src="../images/style/drop.png">
+      </div>
+      <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>¡
+    </div>
 
-    <div class="row">
+    <div class="row" ng-show="showOptions">
       <div class="col-xs-6" id="styleHandler">
         <div id="accordionsSection">
 

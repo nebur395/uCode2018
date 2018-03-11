@@ -109,3 +109,12 @@
   opacity: 0.3;
   transition: 0.1s;
 }
+
+.drop-box {
+  width: 500px;
+  height: 500px;
+}
+
+#styleStyle .dragover {
+  border: 5px dashed blue;
+}

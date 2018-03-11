@@ -1,4 +1,4 @@
-angular.module('ucode18', ['ui.router'])
+angular.module('ucode18', ['ui.router', 'ngFileUpload'])
 
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
