@@ -47,7 +47,7 @@
 /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
 .accordionCard div.panel.show {
   opacity: 1;
-  max-height: 500px;
+  max-height: 2000px;
   border-left: 1px solid rgba(0,0,0,0.8);
   border-right: 1px solid rgba(0,0,0,0.8);
   border-bottom: 1px solid rgba(0,0,0,0.8);

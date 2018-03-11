@@ -55,7 +55,18 @@ angular.module('ucode18')
             {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20, selected: false, model: "XX1"},
             {id:1,src:"../images/style/clothes/camisetabasenegro.jpg", price: 25, selected: false, model: "XX3"}];
         $scope.stylesList = [
-            {id:0,src:"../images/style/clothes/camisetalrayas.jpg", price: 5, selected: false, model: "XX4"}];
+            {id:0,src:"../images/style/styles/web-14.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-13.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-15.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-16.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-17.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-18.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-19.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-20.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-21.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-22.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-23.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-25.png", price: 5, selected: false, model: "XX4"}];
         $scope.logosList = [
             {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 10, selected: false, model: "XX4"},
             {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: true, model: "XX5"}];
