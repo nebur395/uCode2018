@@ -120,3 +120,73 @@
   max-height: 100%;
   margin: auto;
 }
+
+.hiddenOptions {
+  visibility: hidden;
+}
+
+.stylesAnimation {
+  /* The name of the animation */
+  animation-name: stylesAnimation;
+  -webkit-animation-name: stylesAnimation;
+  /* The duration of the animation */
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes stylesAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes stylesAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+
+.imageViewAnimation {
+  /* The name of the animation */
+  animation-name: imageViewAnimation;
+  -webkit-animation-name: imageViewAnimation;
+  /* The duration of the animation */
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes imageViewAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes imageViewAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}

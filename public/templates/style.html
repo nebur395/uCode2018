@@ -2,7 +2,8 @@
 
   <!-- logo -->
   <div id="bannerLogo">
-    <img class="imgRespUcode" src="../images/style/navbar.png">
+    <img class="imgRespUcode" src="../images/style/navbar.png" ng-click="goStarter()"
+         style="cursor:pointer">
   </div>
 
   <div class="container">
@@ -19,7 +20,8 @@
     </div>
 
     <div class="row" ng-show="showOptions">
-      <div class="col-xs-6" id="styleHandler">
+      <div class="col-xs-6" id="styleHandler"
+           ng-class="{stylesAnimation: showOptions, hiddenOptions: !showOptions}">
         <div id="accordionsSection">
 
           <!-- CLOTH ACCORDION -->
@@ -79,8 +81,9 @@
 
       </div>
 
-      <div class="col-xs-6" id="styleView">
-        <img class="imgRespUcode"
+      <div class="col-xs-6" id="styleView"
+           ng-class="{imageViewAnimation: showOptions, hiddenOptions: !showOptions}">
+        <img class="imgRespUcode" style="border: 2px solid rgb(255,255,255);"
              ng-src="{{styleImageView}}">
       </div>
     </div>

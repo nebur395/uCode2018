@@ -1,6 +1,6 @@
 angular.module('ucode18')
 
-    .controller('styleCtrl', ['$scope', 'Upload', '$timeout', function ($scope, Upload, $timeout) {
+    .controller('styleCtrl', ['$scope', 'Upload', '$timeout', '$state', function ($scope, Upload, $timeout, $state) {
 
         $scope.progressPercentage = 0;
 
@@ -134,6 +134,10 @@ angular.module('ucode18')
 
         $scope.changeImageView = function() {
 
+        };
+
+        $scope.goStarter = function () {
+            $state.go('starter');
         }
 
     }]);
