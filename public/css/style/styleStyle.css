@@ -71,7 +71,7 @@
 
 #styleStyle #accordionsSection {
   margin-top: 5%;
-  overflow-y: hidden;
+  overflow-y: auto;
   height: 80%;
 }
 
@@ -111,10 +111,12 @@
 }
 
 .drop-box {
-  width: 500px;
-  height: 500px;
+  width: 100%;
 }
-
-#styleStyle .dragover {
-  border: 5px dashed blue;
+.drop-box img {
+  display:block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
 }

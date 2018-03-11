@@ -45,6 +45,14 @@ angular.module('ucode18')
         });
 
         $scope.styleImageView = "../images/style/view/original.jpg";
+        $scope.dropBackgroundImage = "../images/style/drop.png";
+
+        $scope.changeDropBackgroundEnter = function () {
+            $scope.dropBackgroundImage = "../images/style/drop_hover.png";
+        };
+        $scope.changeDropBackgroundExit = function () {
+            $scope.dropBackgroundImage = "../images/style/drop.png";
+        };
 
         $scope.showClothCard = false;
         $scope.showStyleCard = false;

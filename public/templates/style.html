@@ -12,10 +12,10 @@
            ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
            accept="image/*,application/pdf"
            ngf-pattern="'image/*,application/pdf'">
-        <img class="img-responsive"
-             src="../images/style/drop.png">
+        <img ng-mouseenter="changeDropBackgroundEnter()" ng-mouseleave="changeDropBackgroundExit()"
+             ng-src="{{dropBackgroundImage}}">
       </div>
-      <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>¡
+      <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
     </div>
 
     <div class="row" ng-show="showOptions">
