@@ -43,8 +43,7 @@ angular.module('ucode18')
             }
         });
 
-        $scope.stylePersonImageView = "../images/style/view/original.jpg";
-        $scope.styleClothImageView = "../images/style/view/original.jpg";
+        $scope.styleImageView = "../images/style/view/original.jpg";
         $scope.dropBackgroundImage = "../images/style/drop.png";
 
         $scope.showClothCard = false;
@@ -78,9 +77,10 @@ angular.module('ucode18')
         $scope.contador = 1;
         $scope.changeImage = function() {
             if ($scope.contador <= 7) {
-                $scope.stylePersonImageView = "../images/style/view/person/" + $scope.contador + ".jpg";
-                $scope.styleClothImageView = "../images/style/view/clothes/" + $scope.contador + ".jpg";
+                $scope.styleImageView = "../images/style/view/2/" + $scope.contador + ".jpg";
                 $scope.contador++;
+            } else {
+                $scope.contador = 7;
             }
         };
 
@@ -177,23 +177,5 @@ angular.module('ucode18')
             $state.go('starter');
         };
 
-        $scope.slideIndex = 1;
-
-        $scope.showDivs =function (n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {$scope.slideIndex = 1}
-            if (n < 1) {$scope.slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[$scope.slideIndex-1].style.display = "block";
-        };
-
-        $scope.showDivs($scope.slideIndex);
-
-        $scope.plusDivs = function (n) {
-            $scope.showDivs($scope.slideIndex += n);
-        };
 
     }]);
