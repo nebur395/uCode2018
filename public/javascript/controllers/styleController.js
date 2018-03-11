@@ -55,8 +55,8 @@ angular.module('ucode18')
             {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20, selected: false, model: "XX1"},
             {id:1,src:"../images/style/clothes/camisetabasenegro.jpg", price: 25, selected: false, model: "XX2"}];
         $scope.stylesList = [
-            {id:0,src:"../images/style/styles/web-14.png", price: 5, selected: false, model: "XX3"},
-            {id:1,src:"../images/style/styles/web-13.png", price: 5, selected: false, model: "XX4"},
+            {id:0,src:"../images/style/styles/web-14.png", price: 5, selected: false, model: "XX4"},
+            {id:1,src:"../images/style/styles/web-13.png", price: 5, selected: false, model: "XX3"},
             {id:2,src:"../images/style/styles/web-15.png", price: 5, selected: false, model: "XX5"},
             {id:3,src:"../images/style/styles/web-16.png", price: 5, selected: false, model: "XX6"},
             {id:4,src:"../images/style/styles/web-17.png", price: 5, selected: false, model: "XX7"},
@@ -66,7 +66,7 @@ angular.module('ucode18')
             {id:8,src:"../images/style/styles/web-21.png", price: 5, selected: false, model: "XX11"},
             {id:9,src:"../images/style/styles/web-22.png", price: 5, selected: false, model: "XX12"},
             {id:10,src:"../images/style/styles/web-23.png", price: 5, selected: false, model: "XX13"},
-            {id:11,src:"../images/style/styles/web-25.png", price: 5, selected: false, model: "XX14"}];
+            {id:11,src:"../images/style/styles/web-24.png", price: 5, selected: false, model: "XX14"}];
         $scope.logosList = [
             {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 10, selected: false, model: "XX15"},
             {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: true, model: "XX16"}];
@@ -92,18 +92,37 @@ angular.module('ucode18')
         };
 
         $scope.activeStyle = function(id) {
-            for (i = 0; i < $scope.stylesList.length; i++) {
-                if (id === $scope.stylesList[i].id && $scope.stylesList[i].selected) {
-                    $scope.stylesList[i].selected = false;
-                    $scope.totalStyles = 0;
-                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
-                } else if (id === $scope.stylesList[i].id && !$scope.stylesList[i].selected) {
-                    $scope.stylesList[i].selected = true;
-                    $scope.totalStyles = $scope.stylesList[i].price;
-                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
-                } else {
-                    $scope.stylesList[i].selected = false;
+            if (id === 1) {
+                $scope.activeStripes($scope.stylesList[id]);
+            } else {
+                for (i = 0; i < $scope.stylesList.length; i++) {
+                    if (id === $scope.stylesList[i].id && $scope.stylesList[i].selected) {
+                        $scope.stylesList[i].selected = false;
+                        $scope.totalStyles -= $scope.stylesList[i].price;
+                        $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
+                    } else if (id === $scope.stylesList[i].id && !$scope.stylesList[i].selected) {
+                        $scope.stylesList[i].selected = true;
+                        $scope.totalStyles += $scope.stylesList[i].price;
+                        $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
+                    } else if ($scope.stylesList[i].id !== 1 && $scope.stylesList[i].selected) {
+                        $scope.stylesList[i].selected = false;
+                        $scope.totalStyles -= $scope.stylesList[i].price;
+                    } else if ($scope.stylesList[i].id !== 1) {
+                        $scope.stylesList[i].selected = false;
+                    }
                 }
+            }
+        };
+
+        $scope.activeStripes = function(stripe) {
+            if (stripe.selected) {
+                stripe.selected = false;
+                $scope.totalStyles -= stripe.price;
+                $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
+            } else {
+                stripe.selected = true;
+                $scope.totalStyles += stripe.price;
+                $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
             }
         };
 
