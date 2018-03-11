@@ -14,7 +14,7 @@
 
           <!-- CLOTH ACCORDION -->
           <div class="accordionCard">
-            <button class="accordion" ng-click="showClothCard = !showClothCard"
+            <button class="accordion" ng-click="openCard(1)"
                     ng-class="{active: showClothCard}">
               CLOTHES: <span style="margin-left: 5%">$ {{totalClothes}}</span>
             </button>
@@ -30,31 +30,31 @@
 
           <!-- STYLE ACCORDION -->
           <div class="accordionCard">
-            <button class="accordion" ng-click="showStyleCard = !showStyleCard"
+            <button class="accordion" ng-click="openCard(2)"
                     ng-class="{active: showStyleCard}">
               STYLES: <span style="margin-left: 5%">$ {{totalStyles}}</span>
             </button>
             <div class="panel" ng-class="{show: showStyleCard}">
-              <div class="col-xs-4 clothStyle" ng-repeat="cloth in stylesList"
+              <div class="col-xs-5 clothStyle" ng-repeat="cloth in stylesList"
                    ng-click="activeStyle(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
                 <img class="img-responsive"
                      ng-src="{{cloth.src}}">
-                <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
+                <p>Model: {{cloth.model}} <span>  $ {{cloth.price}}</span></p>
               </div>
             </div>
           </div>
 
           <!-- LOGO ACCORDION -->
           <div class="accordionCard">
-            <button class="accordion" ng-click="showLogoCard = !showLogoCard" ng-class="{active: showLogoCard}">
+            <button class="accordion" ng-click="openCard(3)" ng-class="{active: showLogoCard}">
               LOGOS: <span style="margin-left: 5%">$ {{totalLogos}}</span>
             </button>
             <div class="panel" ng-class="{show: showLogoCard}">
-              <div class="col-xs-4 clothStyle" ng-repeat="cloth in logosList"
+              <div class="col-xs-5 clothStyle" ng-repeat="cloth in logosList"
                    ng-click="activeLogo(cloth.id)" ng-class="{selectedCloth: cloth.selected}">
                 <img class="img-responsive"
                      ng-src="{{cloth.src}}">
-                <p class="text-center" style="padding-top: 5px">$ {{cloth.price}}</p>
+                <p>Model: {{cloth.model}} <span>  $ {{cloth.price}}</span></p>
               </div>
             </div>
           </div>
