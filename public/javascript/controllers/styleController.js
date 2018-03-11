@@ -53,23 +53,23 @@ angular.module('ucode18')
 
         $scope.clothesList = [
             {id:0,src:"../images/style/clothes/camisetabase.jpg", price: 20, selected: false, model: "XX1"},
-            {id:1,src:"../images/style/clothes/camisetabasenegro.jpg", price: 25, selected: false, model: "XX3"}];
+            {id:1,src:"../images/style/clothes/camisetabasenegro.jpg", price: 25, selected: false, model: "XX2"}];
         $scope.stylesList = [
-            {id:0,src:"../images/style/styles/web-14.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-13.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-15.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-16.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-17.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-18.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-19.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-20.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-21.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-22.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-23.png", price: 5, selected: false, model: "XX4"},
-            {id:0,src:"../images/style/styles/web-25.png", price: 5, selected: false, model: "XX4"}];
+            {id:0,src:"../images/style/styles/web-14.png", price: 5, selected: false, model: "XX3"},
+            {id:1,src:"../images/style/styles/web-13.png", price: 5, selected: false, model: "XX4"},
+            {id:2,src:"../images/style/styles/web-15.png", price: 5, selected: false, model: "XX5"},
+            {id:3,src:"../images/style/styles/web-16.png", price: 5, selected: false, model: "XX6"},
+            {id:4,src:"../images/style/styles/web-17.png", price: 5, selected: false, model: "XX7"},
+            {id:5,src:"../images/style/styles/web-18.png", price: 5, selected: false, model: "XX8"},
+            {id:6,src:"../images/style/styles/web-19.png", price: 5, selected: false, model: "XX9"},
+            {id:7,src:"../images/style/styles/web-20.png", price: 5, selected: false, model: "XX10"},
+            {id:8,src:"../images/style/styles/web-21.png", price: 5, selected: false, model: "XX11"},
+            {id:9,src:"../images/style/styles/web-22.png", price: 5, selected: false, model: "XX12"},
+            {id:10,src:"../images/style/styles/web-23.png", price: 5, selected: false, model: "XX13"},
+            {id:11,src:"../images/style/styles/web-25.png", price: 5, selected: false, model: "XX14"}];
         $scope.logosList = [
-            {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 10, selected: false, model: "XX4"},
-            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: true, model: "XX5"}];
+            {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 10, selected: false, model: "XX15"},
+            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: true, model: "XX16"}];
         $scope.totalToPay = $scope.logosList[1].price;
         $scope.totalClothes = 0;
         $scope.totalStyles = 0;

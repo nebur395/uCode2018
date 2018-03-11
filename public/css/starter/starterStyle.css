@@ -2,11 +2,12 @@
   width: 100%;
   height: 100%;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-attachment: fixed;
   background-size: cover;
   background-color: #f1f1f1;
   background-image: url("/images/starter/pantalla_principal_02.png");
+  animation: animatedBackground 15s linear;
 }
 
 #starterStyle #processButton {
@@ -26,4 +27,22 @@
   transition: 0.1s;
   padding: 10px 40px;
   font-size: 110%;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 50%;
+  }
+}
+
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 50%;
+  }
 }
