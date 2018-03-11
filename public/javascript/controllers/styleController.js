@@ -58,19 +58,22 @@ angular.module('ucode18')
             {id:0,src:"../images/style/clothes/camisetalrayas.jpg", price: 5, selected: false, model: "XX4"}];
         $scope.logosList = [
             {id:0,src:"../images/style/clothes/camisetalogogrande.jpg", price: 10, selected: false, model: "XX4"},
-            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: false, model: "XX5"}];
+            {id:1,src:"../images/style/clothes/camisetalogopequeno.jpg", price: 5, selected: true, model: "XX5"}];
+        $scope.totalToPay = $scope.logosList[1].price;
         $scope.totalClothes = 0;
         $scope.totalStyles = 0;
-        $scope.totalLogos = 0;
+        $scope.totalLogos = $scope.logosList[1].price;
 
         $scope.activeCloth = function(id) {
             for (i = 0; i < $scope.clothesList.length; i++) {
                 if (id === $scope.clothesList[i].id && $scope.clothesList[i].selected) {
                     $scope.clothesList[i].selected = false;
                     $scope.totalClothes = 0;
+                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
                 } else if (id === $scope.clothesList[i].id && !$scope.clothesList[i].selected) {
                     $scope.clothesList[i].selected = true;
                     $scope.totalClothes = $scope.clothesList[i].price;
+                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
                 } else {
                     $scope.clothesList[i].selected = false;
                 }
@@ -82,9 +85,11 @@ angular.module('ucode18')
                 if (id === $scope.stylesList[i].id && $scope.stylesList[i].selected) {
                     $scope.stylesList[i].selected = false;
                     $scope.totalStyles = 0;
+                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
                 } else if (id === $scope.stylesList[i].id && !$scope.stylesList[i].selected) {
                     $scope.stylesList[i].selected = true;
                     $scope.totalStyles = $scope.stylesList[i].price;
+                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
                 } else {
                     $scope.stylesList[i].selected = false;
                 }
@@ -94,11 +99,12 @@ angular.module('ucode18')
         $scope.activeLogo = function(id) {
             for (i = 0; i < $scope.logosList.length; i++) {
                 if (id === $scope.logosList[i].id && $scope.logosList[i].selected) {
-                    $scope.logosList[i].selected = false;
                     $scope.totalLogos = 0;
+                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
                 } else if (id === $scope.logosList[i].id && !$scope.logosList[i].selected) {
                     $scope.logosList[i].selected = true;
                     $scope.totalLogos = $scope.logosList[i].price;
+                    $scope.totalToPay = $scope.totalClothes + $scope.totalStyles + $scope.totalLogos;
                 } else {
                     $scope.logosList[i].selected = false;
                 }
